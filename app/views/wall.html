@@ -1,0 +1,36 @@
+<div layout="row" layout-fill>
+    <md-content layout="column" layout-fill>
+        <md-toolbar style="background-color: #000066;">
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Gate 2 | LH 4789 to Tokyo</span>
+                </h2>
+                <span flex></span>
+                <md-menu>
+                    <md-button ng-click="$mdOpenMenu()" aria-label="">
+                        <img src="./images/user.png">
+                    </md-button>
+                    <md-menu-content width="3" layout-align="center center">
+                        <md-menu-item layout-fill>
+                            <md-button>Change Password</md-button>
+                        </md-menu-item>
+                        <md-menu-item layout-fill>
+                            <md-button>My Profile Informations</md-button>
+                        </md-menu-item>
+                        <md-menu-item layout-fill>
+                            <md-button>Logout</md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+        </md-toolbar>
+        <br>
+        <div ng-repeat="contact in wall.contacts">
+            <md-button class="md-mini md-fab borderColor" ng-class="contact.position" aria-label="women" ng-click="wall.showListBottomSheet($event, contact);">
+                <img ng-src="{{contact.imagesrc}}" class="firstAva" alt="Nick Giannopoulos">
+            </md-button>
+        </div>
+        <md-button class="md-mini md-fab myPosition borderColor" aria-label="myPosition">
+        </md-button>
+    </md-content>
+</div>
