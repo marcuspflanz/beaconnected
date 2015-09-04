@@ -2,6 +2,9 @@
     <md-content layout="column" layout-fill>
         <md-toolbar style="background-color: #000066;">
             <div class="md-toolbar-tools">
+                <md-button class="md-mini" ng-click="wall.backToInterest();" style="min-width:1em; line-height:0; margin:0; margin-right: 1em;">
+                    <img src="./images/back.png">
+                </md-button>
                 <h2>
                     <span>Gate 2 | LH 4789 to Tokyo</span>
                 </h2>
@@ -18,7 +21,7 @@
                             <md-button>My Profile Informations</md-button>
                         </md-menu-item>
                         <md-menu-item layout-fill>
-                            <md-button>Logout</md-button>
+                            <md-button ng-click="wall.logout();">Logout</md-button>
                         </md-menu-item>
                     </md-menu-content>
                 </md-menu>

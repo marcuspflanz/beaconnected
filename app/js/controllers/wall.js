@@ -11,13 +11,15 @@ let rest = require('rest');
  */
 class WallCtrl {
 
-    constructor($state, $mdBottomSheet) {
+    constructor($state, $mdBottomSheet, $scope) {
         // ViewModel
         var vm = this;
         vm.state = $state;
         vm.buttonSheet = $mdBottomSheet;
+        vm.scope = $scope;
         xapixService.getUsers().then((users) => {
             vm.contacts = users;
+            vm.scope.$apply();
         });
 
         //    [
@@ -67,12 +69,20 @@ class WallCtrl {
         });
     }
 
+    logout() {
+        this.state.go('welcome');
+    }
+
+    backToInterest() {
+        this.state.go('interested');
+    }
     /**
      *
      */
     openWall() {
-        this.state.go('Wall');
+        this.state.go('wall');
     }
+
 }
 
-controllersModule.controller('WallCtrl', ['$state', '$mdBottomSheet', WallCtrl]);
+controllersModule.controller('WallCtrl', ['$state', '$mdBottomSheet', '$scope', WallCtrl]);
