@@ -1,11 +1,12 @@
 'use strict';
 
 var controllersModule = require('./_index');
+let rest = require('rest');
 
 /**
  * @ngInject
  */
-class WelcomeCtrl {
+class InterestedCtrl {
 
     constructor($state) {
         // ViewModel
@@ -13,12 +14,9 @@ class WelcomeCtrl {
         vm.state = $state;
     }
 
-    /**
-     *
-     */
-    openWall() {
+    goToMap() {
         this.state.go('wall');
     }
 }
 
-controllersModule.controller('WelcomeCtrl', ['$state', WelcomeCtrl]);
+controllersModule.controller('InterestedCtrl', ['$state', InterestedCtrl]);
