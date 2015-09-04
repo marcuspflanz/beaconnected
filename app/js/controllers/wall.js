@@ -17,7 +17,7 @@ class WallCtrl {
         vm.state = $state;
         vm.buttonSheet = $mdBottomSheet;
         xapixService.getUsers().then((users) => {
-            vm.contacts = users.rows;
+            vm.contacts = users;
         });
 
         //    [

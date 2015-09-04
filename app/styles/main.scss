@@ -7,3 +7,9 @@ body {
   background-color: $background--light;
   padding: $half-space;
 }
+
+.detailImage {
+  position: absolute;
+  top: -3em;
+  left: 0;
+}

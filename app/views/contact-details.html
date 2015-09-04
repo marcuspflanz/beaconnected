@@ -1,9 +1,15 @@
-<md-bottom-sheet class="md-list md-has-header">
-    <md-subheader>Comment Actions</md-subheader>
+
+<md-bottom-sheet class="md-list md-has-header" style="height: 40%;">
+    <md-button class="md-fab detailImage">
+        <img src="{{contactDetail.contact.imagesrc}}" class="firstAva">
+    </md-button>
+    <h2 style="margin-top: 2em;">
+        <span style="padding: 1em;">Profil Information</span>
+    </h2>
     <md-list>
         <md-list-item>
             <md-subheader>I like the Book</md-subheader>
-                <label>{{contactDetail.contact.interest1}}</label>
+            <label>{{contactDetail.contact.interest1}}</label>
         </md-list-item>
         <md-list-item>
             <md-subheader>I like the Book</md-subheader>
