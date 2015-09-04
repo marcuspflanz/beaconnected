@@ -1,24 +1,49 @@
 <style type="text/css">
-  div.bg {
-    background-image: url('./images/login_background.jpg');
-    background-repeat: no-repeat;
-  }
 </style>
 
 <div class="bg" layout-fill>
-  <h1 style="color: white;">Welcome back to Bea Connected Juan!</h1>
-  <div layout-align="center center">
-    <md-button class="md-raised md-primary" ng-click="welcome.onLogin();">LOGIN</md-button>
+  <md-subheader style="background-color: #000066; color: #FFB915; margin-right: 0">
+    Welcome back to Bea Connected Juan!
+    Please Login!
+  </md-subheader>
+  <div layout="row" flex style="height: 30em;">
+    <md-button class="md-fab" style="background-color: #000066; color: #FFB915; border: solid 2px #FFB915; top: 35%;
+    left: 28%;
+    height: 10em;
+    width: 10em;">LOGIN</md-button>
   </div>
-  <div layout="row">
-    <md-button class="md-fab md-primary" aria-label="Facebook">
+  <div layout="row" layout-align="center center">
+    <br>
+    <br>
+    <md-button class="md-fab" style="background-color: #3F5D9A; color: white;">
       <md-icon md-svg-src="./images/facebook.svg"></md-icon>
+      <p>Facebook</p>
     </md-button>
-    <md-button class="md-fab md-primary" aria-label="Twitter">
+    <md-button class="md-fab" style="background-color: #1078B3; color: white;">
+      <md-icon md-svg-src="./images/linkedin.svg"></md-icon>
+      <p>LinkedIn</p>
+    </md-button>
+    <md-button class="md-fab" style="background-color: #399DC1; color: white;">
       <md-icon md-svg-src="./images/twitter.svg"></md-icon>
+      <p>Twitter</p>
     </md-button>
-    <md-button class="md-fab md-primary" aria-label="LinkedIn">
-      <md-icon md-svg-src="./images/linkedin.png"></md-icon>
-    </md-button>
+    <!--<md-list layout="column" layout-align="space-around center" layout-fill style="width: 50%;">-->
+      <!--<md-list-item ng-click="welcome.onLogin();" style="background-color: #3F5D9A; color: white; margin-left: 100%;" layout-fill flex>-->
+        <!--<md-button class="md-fab">-->
+        <!--<md-icon md-svg-src="./images/facebook.svg"></md-icon>-->
+        <!--<p>Facebook</p>-->
+        <!--</md-button>-->
+      <!--</md-list-item>-->
+      <!--<br>-->
+      <!--<md-list-item ng-click="welcome.onLogin();" style="background-color: #399DC1; color: white; margin-left: 100%;" layout-fill flex>-->
+        <!--<md-icon md-svg-src="./images/twitter.svg"></md-icon>-->
+        <!--<p>Twitter</p>-->
+      <!--</md-list-item>-->
+      <!--<br>-->
+      <!--<md-list-item ng-click="welcome.onLogin();" style="background-color: #1078B3; color: white; margin-left: 100%;"layout-fill flex>-->
+        <!--<md-icon md-svg-src="./images/linkedin.svg"></md-icon>-->
+        <!--<p>LinkedIn</p>-->
+      <!--</md-list-item>-->
+    </md-list>
   </div>
 </div>
