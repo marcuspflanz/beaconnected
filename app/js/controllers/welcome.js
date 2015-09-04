@@ -7,18 +7,15 @@ var controllersModule = require('./_index');
  */
 class WelcomeCtrl {
 
-    constructor($state) {
-        // ViewModel
-        var vm = this;
-        vm.state = $state;
-    }
+  constructor($state) {
+    // ViewModel
+    var vm = this;
+    vm.state = $state;
+  }
 
-    /**
-     *
-     */
-    openWall() {
-        this.state.go('wall');
-    }
+  onLogin() {
+    this.state.go('interested');
+  }
 }
 
 controllersModule.controller('WelcomeCtrl', ['$state', WelcomeCtrl]);
