@@ -5,7 +5,7 @@
 body {
   font-family: Helvetica, sans-serif;
   color: $font-color--dark;
-  background-color: skyblue;
+  background-color: #f7f7f7;
   padding: $half-space;
 }
 
@@ -44,7 +44,7 @@ body {
 }
 
 .welcomebg {
-  background-color: skyblue;
+  background-color: #f7f7f7;
   background-image: url("./../images/welcomebg.png");
   background-size: contain;
 }
@@ -54,6 +54,6 @@ body {
 }
 
 .md-select-menu-container.md-select-menu-container.md-select-menu-container {
-  background-color: #9dcedd;
+  background-color: #f7f7f7;
   color: white;
 }

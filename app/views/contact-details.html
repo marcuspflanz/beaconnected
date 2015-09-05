@@ -1,15 +1,16 @@
 
 <md-bottom-sheet class="md-list md-has-header" style="height: 40%; background-color: whitesmoke">
     <md-button class="md-fab detailImage" style="background-color: white;">
-        <img src="{{contactDetail.contact.imagesrc}}" class="detailImg">
+        <img ng-if="contactDetail.contact.position !== 'first'" src="{{contactDetail.contact.imagesrc}}" class="detailImg">
+        <img ng-if="contactDetail.contact.position === 'first'" src="{{contactDetail.contact.imagesrc}}" class="detailImg" style="width: 4.5em;">
     </md-button>
     <div layout="row">
 
-    <h2 style="margin-top: 2em;">
+    <h2 style="margin-top: 2em;font-weight: bold;font-size:larger;">
         <span style="padding: 1em;">{{contactDetail.contact.firstname}} {{contactDetail.contact.lastname}}</span>
     </h2>
         <span flex></span>
-        <md-button class="md-fab md-mini" style="background-color: #000066;" ng-click="contactDetail.getInContact();">
+        <md-button class="md-fab md-mini" style="background-color: #000066;top: 1em;" ng-click="contactDetail.getInContact();">
             <img src="./images/add.png" style="position: absolute;left: 0.88em;top: 0.8em;">
         </md-button>
     </div>
