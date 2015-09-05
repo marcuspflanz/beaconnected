@@ -1,10 +1,10 @@
 <div layout-fill layout-align="center center">
     <md-subheader style="background-color: #000066; color: #FFB915; margin-right:0;">What you want to talk about</md-subheader>
     <br>
-    <md-input-container>
+    <md-input-container class="solidfill">
         <label>First Interst</label>
-    <md-select ng-model="interest.interest1" placeholder="Books">
-        <md-option>
+    <md-select class="solidfill" ng-model="interest.interest1" placeholder="Books">
+        <md-option class="solidfill">
             Books
         </md-option>
         <md-option>
@@ -62,7 +62,8 @@
     </md-select>
     </md-input-container>
 
-    <md-button class="md-fab mapBtn" ng-click="interest.goToMap();">
+    <md-button class="md-fab mapBtn" ng-click="interest.goToMap();"
+            style="background-color: #000066">
         <img src="./images/map.png">
     </md-button>
 </div>
