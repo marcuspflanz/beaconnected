@@ -27,32 +27,10 @@ class WallCtrl {
             'firstname': 'Lufthansa',
             'lastname': 'Lounge 1',
             'email': 'hans@werner.de',
-            'interest1': 'Bring people in the air',
-            'interest2': 'like our customers',
-            'interest3': 'can help you'
+            'interest1': 'lifting up people',
+            'interest2': '  like our customers',
+            'interest3': '  want to help you'
         };
-        //    [
-        //    {
-        //        'imagesrc': 'http://lorempixel.com/50/50/people?2',
-        //        'firstname': 'Hans',
-        //        'lastname': 'Werner',
-        //        'email': 'hans@werner.de',
-        //        'position': 'first',
-        //        'interest1': 'Thriller',
-        //        'interest2': 'blub',
-        //        'interest3': 'blub'
-        //    },
-        //    {
-        //        'imagesrc': 'http://lorempixel.com/50/50/people?2',
-        //        'firstname': 'Hans',
-        //        'lastname': 'Werner',
-        //        'email': 'hans@werner.de',
-        //        'position': 'second',
-        //        'interest1': 'Thriller',
-        //        'interest2': 'blub',
-        //        'interest3': 'blub'
-        //    }
-        //];
     }
 
     myContactProfil() {
