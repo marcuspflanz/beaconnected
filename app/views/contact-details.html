@@ -1,21 +1,26 @@
 
 <md-bottom-sheet class="md-list md-has-header" style="height: 40%;">
-    <md-button class="md-fab detailImage">
-        <img src="{{contactDetail.contact.imagesrc}}" class="firstAva">
+    <md-button class="md-fab detailImage" style="background-color: white;">
+        <img src="{{contactDetail.contact.imagesrc}}" class="detailImg">
     </md-button>
     <h2 style="margin-top: 2em;">
-        <span style="padding: 1em;">Profil Information</span>
+        <span style="padding: 1em;">{{contactDetail.contact.firstname}} {{contactDetail.contact.lastname}}</span>
     </h2>
     <md-list>
         <md-list-item>
-            <md-subheader>I like the Book</md-subheader>
+            <md-subheader>I like</md-subheader>
             <label>{{contactDetail.contact.interest1}}</label>
         </md-list-item>
         <md-list-item>
-            <md-subheader>I like the Book</md-subheader>
+            <md-subheader>and</md-subheader>
             <label>{{contactDetail.contact.interest2}}</label>
         </md-list-item>
+        <md-list-item>
+            <md-subheader>and</md-subheader>
+            <label>{{contactDetail.contact.interest3}}</label>
+        </md-list-item>
     </md-list>
+    <md-button>Connect me</md-button>
 </md-bottom-sheet>
 
 

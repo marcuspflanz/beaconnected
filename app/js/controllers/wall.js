@@ -22,6 +22,15 @@ class WallCtrl {
             vm.scope.$apply();
         });
 
+        vm.lufthansaLounge = {
+            'imagesrc': './images/lufthansa.png',
+            'firstname': 'Lufthansa',
+            'lastname': 'Lounge 1',
+            'email': 'hans@werner.de',
+            'interest1': 'Bring people in the air',
+            'interest2': 'like our customers',
+            'interest3': 'can help you'
+        };
         //    [
         //    {
         //        'imagesrc': 'http://lorempixel.com/50/50/people?2',
@@ -76,6 +85,7 @@ class WallCtrl {
     backToInterest() {
         this.state.go('interested');
     }
+
     /**
      *
      */

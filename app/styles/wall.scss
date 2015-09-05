@@ -5,6 +5,12 @@
   background-color: red;
 }
 
+.lufthansalounge {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+}
+
 .smallSize {
   width: 2.5em;
   height: 2em;
@@ -21,13 +27,14 @@
 }
 
 .borderColor {
-  border: 0.3em solid #FFB915;
+  border: 0.2em solid #FFB915;
 }
 
 .firstAva.firstAva.firstAva.firstAva {
   position: absolute;
-  left: -0.1em;
+  left: -0.4em;
   top: -0.3em;
+  width: 3em;
 }
 
 .first.first.first.first {
