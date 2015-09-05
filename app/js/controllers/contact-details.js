@@ -8,12 +8,32 @@ let rest = require('rest');
  */
 class ContactDetailsCtrl {
 
-    constructor(contact) {
+    constructor(contact, $mdDialog) {
         // ViewModel
         var vm = this;
         vm.contact = contact;
+        vm.mdDialog = $mdDialog;
     }
 
+    getInContact() {
+        const that = this;
+        let result = that.mdDialog.show({
+            clickOutsideToClose: true, // close dialog with click outside
+            hasBackdrop: true, // remove modal background
+            controller: 'WithCtrl',
+            controllerAs: 'with',
+            templateUrl: 'contact-with.html',
+            locals: { // additional injections
+                contact: this.contact
+            }
+        }).then((result) => { // Confirm
+            return result;
+        });
+        if (callback) {
+            result = result.then(callback);
+        }
+        return result
+    }
 }
 
-controllersModule.controller('ContactDetailsCtrl', ['contact', ContactDetailsCtrl]);
+controllersModule.controller('ContactDetailsCtrl', ['contact', '$mdDialog', ContactDetailsCtrl]);

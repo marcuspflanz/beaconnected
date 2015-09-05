@@ -1,0 +1,23 @@
+<md-dialog flex="50" aria-label="Name Dialog">
+    <form class="txNoPadding" layout-fill style="background-color:white;">
+        <md-toolbar>
+            <div class="md-toolbar-tools" style="background-color: #000066;">
+                <h2 style="color: white;">Get in contact with {{with.contact.firstname}} {{with.contact.lastname}}</h2>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+         <md-input-container>
+             <label>Message</label>
+
+             <textarea ng-model="with.message"></textarea>
+         </md-input-container>
+        </md-dialog-content>
+        <md-divider></md-divider>
+        <div class="md-actions" layout="row">
+            <span flex></span>
+            <md-button ng-click="with.storeContact()" style="background-color: #000066; color: #FFB915;">
+               send message
+            </md-button>
+        </div>
+    </form>
+</md-dialog>

@@ -3,9 +3,16 @@
     <md-button class="md-fab detailImage" style="background-color: white;">
         <img src="{{contactDetail.contact.imagesrc}}" class="detailImg">
     </md-button>
+    <div layout="row">
+
     <h2 style="margin-top: 2em;">
         <span style="padding: 1em;">{{contactDetail.contact.firstname}} {{contactDetail.contact.lastname}}</span>
     </h2>
+        <span flex></span>
+        <md-button class="md-fab md-mini" style="background-color: #000066;" ng-click="contactDetail.getInContact();">
+            <img src="./images/add.png" style="position: absolute;left: 0.88em;top: 0.8em;">
+        </md-button>
+    </div>
     <md-list>
         <md-list-item>
             <md-subheader>I like</md-subheader>

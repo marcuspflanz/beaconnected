@@ -30,7 +30,8 @@
         <br>
         <div ng-repeat="contact in wall.contacts">
             <md-button class="md-mini md-fab borderColor" ng-class="contact.position" aria-label="women" ng-click="wall.showListBottomSheet($event, contact);">
-                <img ng-src="{{contact.imagesrc}}" class="firstAva" alt="Nick Giannopoulos">
+                <img ng-if="contact.position !== 'first'" ng-src="{{contact.imagesrc}}" class="firstAva" alt="Nick Giannopoulos">
+                <img ng-if="contact.position === 'first'" ng-src="{{contact.imagesrc}}" class="meAva" alt="Nick Giannopoulos">
             </md-button>
         </div>
         <md-button class="md-mini md-fab myPosition borderColor" aria-label="myPosition">
