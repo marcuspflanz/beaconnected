@@ -2,12 +2,10 @@ import rest from 'rest';
 
 const restClient = rest;
 const headers = {
-  //'Content-Type': 'application/vnd.api+json',
-  'Content-Type': 'application/json; charset=utf-8',
-  //auth_token: 'FbPzyTdHU0JKo7Zv3jkXWqxV9gEtBfn5'
+  'Content-Type': 'application/vnd.api+json',
+  auth_token: 'FbPzyTdHU0JKo7Zv3jkXWqxV9gEtBfn5'
 };
-//const BASE_URL = 'https://app.xapix.io/api/v1/mateup/';
-const PASSENGERS_URL = 'https://catasta.menkent.uberspace.de/couchdb/clubmatepassengers/_all_docs?include_docs=true';
+const PASSENGERS_URL = 'https://app.xapix.io/api/v1/mateup/passengers';
 
 export default class XapixService {
   static getUsers() {
@@ -17,8 +15,12 @@ export default class XapixService {
     };
 
     return restClient(requestConfig).then((response) => {
-      const users = JSON.parse(response.entity);
-      return users.rows.map((doc) => {return doc.doc;});
+      debugger;
+      const userData = JSON.parse(response.entity);
+      const users = userData.data.map(({attributes}) => {
+        return attributes;
+      });
+      return users;
     }).catch((error) => {
     });
   }
